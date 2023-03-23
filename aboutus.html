@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.thymeleaf.com ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMyVenue | Aboutus</title>
+
+    <!-- For Bootstrap File -->
+    <link href="./resources/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+
+    <!-- Custom styles for header-customer module template -->
+    <link href="./resources/css/header.css" rel="stylesheet">
+
+    <!-- Custom styles for carousel and footer template -->
+    <link href="./resources/css/carousel.css" rel="stylesheet">
+
+    <!-- Custom styles for carousel and footer template -->
+    <link href="./resources/css/contactus.css" rel="stylesheet">
+
+    <!-- Footer links -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <style>
+        text-primary {
+            color: #2c1d3a !important;
+        }
+
+        .bg-primary {
+            background-color: #2c1d3a !important;
+        }
+
+        .bg-secondary {
+            background-color: #f6fafd !important;
+        }
+
+        .btn-primary {
+            background-color: #2c1d3a !important;
+            border: none !important;
+            border-radius: 0 !important;
+            outline: none !important;
+        }
+
+        .btn-secondary {
+            background-color: #6b2d5e !important;
+            border: none !important;
+            border-radius: 0 !important;
+            outline: none !important;
+        }
+
+        .bg-light {
+            background-color: transparent !important;
+        }
+
+        .has-search .form-control {
+            padding-left: 2.375rem;
+        }
+
+        .has-search .form-control-feedback {
+            position: absolute;
+            z-index: 2;
+            display: block;
+            width: 2.375rem;
+            height: 2.375rem;
+            line-height: 2.375rem;
+            text-align: center;
+            pointer-events: none;
+            color: #aaa;
+        }
+
+        /* .bordercheck{
+            border: 2px solid black;
+        } */
+        #form input {
+            border: none !important;
+            border-bottom: 2px solid grey !important;
+            border-radius: 0 !important;
+
+            padding-bottom: 1.5rem !important;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    </script>
+</head>
+
+<body>
+    <!-- Navbar Sections Starts  -->
+    <header>
+        <div class="fixed-top bg-dark py-0" id="navbar">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                        <span class="logo">𝐵𝑜𝑜𝓀𝑀𝓎𝒱𝑒𝓃𝓊𝑒<span>
+                                <!-- <span class="logo">ßððkM¥Vêñµê<span> -->
+                    </a>
+    
+                    <ul class="nav col-12 col-lg-auto my-2 align-items-center justify-content-center my-md-0 text-small">
+                        <li>
+                            <a href="home.html" class="nav-link text-white">
+                                <span class="logoli">HOME</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="venuecard.html" class="nav-link text-white">
+                                <span class="logoli">VENUES</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="aboutus.html" class="nav-link text-white">
+                                <span class="logoli">ABOUT</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contactus.html" class="nav-link text-white">
+                                <span class="logoli">CONTACT</span>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="text-end">
+                                <a href="" class="btn btn-light text-dark my-3 mx-2" data-toggle="modal"
+                                    data-target="#loginModal">Login</a>
+                                <a href="" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#signupModal">Sign-up</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Navbar Sections Ends  -->
+
+    <!-- <!login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <!Signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">SignUp</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputName">Full Name</label>
+                            <input type="Name" class="form-control" id="exampleInputName" aria-describedby="NameHelp">
+                            <small id="NameHelp" class="form-text text-muted">In Capital Letters.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <small id="exampleInputPassword1" class="form-text text-muted">Must be minimum of 6
+                                characters.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="cexampleInputPassword1">Confirm Password</label>
+                            <input type="password" class="form-control" id="cexampleInputPassword1">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Create Account</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us -->
+    <div class="row p-sm-4 p-lg-5" id="aboutus">
+        <div class="col-sm-12">
+            <h3 class="display-6 text-primary fw-bold mb-5">
+                <h2 class="h-primary center">About Us</h2>
+            </h3>
+        </div>
+
+        <div class="col-sm-12 col-lg-5 p-lg-5 d-flex flex-column align-items-center justify-content-center">
+            <div class="row mb-3">
+                <div class="col-6">
+                    <img src="./resources/images/aboutus/listing-logo01.png" alt="" class="img-fluid" />
+                </div>
+                <div class="col-6">
+                    <img src="./resources/images/aboutus/listing-logo02.png" alt="" class="img-fluid" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <img src="./resources/images/aboutus/listing-logo03.png" alt="" class="img-fluid" />
+                </div>
+                <div class="col-6">
+                    <img src="./resources/images/aboutus/listing-logo04.png" alt="" class="img-fluid" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-lg-7 p-lg-5 bordercheck">
+            <p class="description">
+                In-house numbers have increased in recent years as companies look to
+                harness more value from their legal departments and develop their
+                own internal skillsets. Since 2013, The Legal 500 has been
+                instrumental in recognising those in-house lawyers who are driving
+                business forward.
+            </p>
+
+            <p class="fw-bold mt-4">
+                We invite law firm partners and in-house counsel to nominate
+                in-house lawyers that have been instrumental in:
+            </p>
+            <p>
+                <i class="bi bi-check-all" style="color: #ae4098"></i> Changing or
+                forming opinions within their company or industry
+                <br />
+                <i class="bi bi-check-all" style="color: #ae4098"></i> Have
+                developed brilliant technical solutions to complex issues
+                <br />
+                <i class="bi bi-check-all" style="color: #ae4098"></i> Created
+                innovative structures to ensure that the in-house function is
+                driving the business.
+                <br />
+                <i class="bi bi-check-all" style="color: #ae4098"></i> Provided a
+                business working model that other corporate counsel should follow
+            </p>
+            <button class="btn btn-primary fs-4 p-3 mt-4">
+                View All Editions
+            </button>
+        </div>
+    </div>
+
+    <!-- <div id="footer"></div> -->
+    <!-- footer code here-->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-xs-12">
+                    <div class="first">
+                        <h4>Event Planning Services</h4>
+                        <p> All Event Vendors</p>
+                        <p> Catering Services</p>
+                        <p> Wedding Planning</p>
+                        <p> Event Planning</p>
+                        <p> Birthday Planning</p>
+
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-xs-12">
+                    <div class="second">
+                        <h4>More</h4>
+                        <ul>
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="aboutus.html">About Us</a></li>
+                            <li><a href="contactus.html">Contact Us</a></li>
+                            <li><a href="venues.html">Find A Venue | Vendor</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-xs-12">
+                    <div class="third">
+                        <h4> Contact</h4>
+                        <ul>
+                            <li>+91 9876543210 </li>
+                            <li>+91 8967456543</li>
+
+                            <li><i class="far fa-envelope"></i> info@bookmyvenue.com</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="foot">
+            <h6>ⓒ 2022 BOOKMYVENUE | ALL RIGHTS RESERVED</h6>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="line"></div>
+                    <div class="second2">
+                        <a href="https://codepen.io/AndreeaBunget" target="_blank"> <i
+                                class="fab fa-codepen fa-2x margin"></i></a>
+                        <a href="https://github.com/WebDeveloperCodeRep" target="_blank"> <i
+                                class="fab fa-github fa-2x margin"></i></a>
+                        <a href="https://www.linkedin.com/in/andreea-mihaela-bunget-a4248812b/" target="_blank"> <i
+                                class="fab fa-linkedin fa-2x margin"></i></a>
+                        <a href="https://www.youtube.com/channel/UCX674BUbomzBCakbb75lhfA?view_as=subscriber"
+                            target="_blank"><i class="fab fa-youtube fa-2x margin"></i></a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="./resources/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

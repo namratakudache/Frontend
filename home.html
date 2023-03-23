@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<!-- <html lang="en" xmlns:th="http://www.thymeleaf.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.thymeleaf.com "> -->
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- For Bootstrap File -->
+    <link href="./resources/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+
+    <!-- All External Css Files Imported -->
+    <!-- Custom styles for header-customer module template -->
+    <link rel="stylesheet" type="text/css" href="./resources/css/header.css">
+
+    <!-- Custom styles for carousel and footer template -->
+    <link rel="stylesheet" type="text/css" href="./resources/css/carousel.css">
+
+    <!-- Custom styles for searchox template -->
+    <link rel="stylesheet" type="text/css" href="./resources/css/searchbox.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Footer links -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- Internal CSS -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Jumbotron Image */
+        .jumImage {
+            display: block;
+            width: 400px;
+            height: 300px;
+            margin: auto;
+            border-radius: 50px;
+        }
+        .boxTopMargin {
+            height: 500px;
+        }
+        
+    </style>
+
+    <!-- Internal Scroll Script -->
+    <script>
+        function scrollValue() {
+            var navbar = document.getElementById('navbar');
+            var scroll = window.scrollY;
+            if (scroll < 75) {
+                navbar.classList.remove('BgColour');
+            } else {
+                navbar.classList.add('BgColour');
+            }
+        }
+
+        window.addEventListener('scroll', scrollValue);
+    </script>
+
+    <!-- Project Title -->
+    <title>BookMyVenue | Event Planning Website</title>
+</head>
+
+<body>
+    <!-- NavBar -->
+    <header>
+        <div class="fixed-top py-0" id="navbar">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="/"
+                        class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                        <span class="logo">𝐵𝑜𝑜𝓀𝑀𝓎𝒱𝑒𝓃𝓊𝑒<span>
+                        <!-- <span class="logo">ßððkM¥Vêñµê<span> -->
+                    </a>
+
+                    <ul class="nav col-12 col-lg-auto my-2 align-items-center justify-content-center my-md-0 text-small">
+                        <li>
+                            <a href="home.html" class="nav-link text-white">
+                                <span class="logoli">HOME</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="venuecard.html" class="nav-link text-white">
+                                <span class="logoli">VENUES</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="aboutus.html" class="nav-link text-white">
+                                <span class="logoli">ABOUT</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contactus.html" class="nav-link text-white">
+                                <span class="logoli">CONTACT</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="photosgallery.html" class="nav-link text-white">
+                                <span class="logoli">PHOTOS</span>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="text-end">
+                                <a href="" class="btn btn-light text-dark my-3 mx-2" data-toggle="modal"
+                                    data-target="#loginModal">Login</a>
+                                <a href="" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#signupModal">Sign-up</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- <!login Modal -->
+    <div class="modal fade my-3" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <!Signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">SignUp</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputName">Full Name</label>
+                            <input type="Name" class="form-control" id="exampleInputName" aria-describedby="NameHelp">
+                            <small id="NameHelp" class="form-text text-muted">In Capital Letters.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <small id="exampleInputPassword1" class="form-text text-muted">Must be minimum of 6
+                                characters.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="cexampleInputPassword1">Confirm Password</label>
+                            <input type="password" class="form-control" id="cexampleInputPassword1">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Create Account</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <!Home Feature and SearchBox Code -->
+    <div class="container-fluid main-section">
+        <div class="row">
+            <div class="col-lg-12 text-white text-center mb-1 sub-section">
+                <!-- <h1><i> "We Build Your Dream Around You "</i></h1> -->
+                <h2>" <i>We Create. You Celebrate..."</i></h2>
+                <!-- <h1> Events with Elegance</h1> -->
+                <br>
+                <h3><i>Find & Book The Best Venues For Your Special Event</i></h3>
+
+            </div>
+            <!-- <div class="title">
+                        <h3>Find & Book best Venues for your special Event</h3>
+                    </div> -->
+            <div class="col-lg-7 select-part-section p-2 rounded">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <select class="form-control form-control-lg pull-left" placeholder="select language">
+                            <option> Event</option>
+                            <option>Wedding</option>
+                            <option>Reception</option>
+                            <option>Anniversary</option>
+                            <option>Conference</option>
+                            <option>Exibition</option>
+                            <option>Birthday Party</option>
+                            <option>Engagement</option>
+                            <option>Bachelor Party</option>
+
+                            <option>Social Gathering</option>
+
+                        </select>
+                    </div>
+                    <div class="col-lg-3 border-left">
+                        <select class="form-control form-control-lg" placeholder="select language">
+                            <option> VenueType</option>
+                            <option>Banquet halls</option>
+                            <option>Hotels</option>
+                            <option>Resorts</option>
+                            <option>Restaurants</option>
+                            <option>Farm House</option>
+                            <option>Villa</option>
+
+                        </select>
+                    </div>
+                    <div class="col-lg-3 border-left">
+                        <select class="form-control form-control-lg pull-left" placeholder="select language">
+                            <option value="1"> Venue </option>
+                            <option value="2">Kolhapur</option>
+                            <option value="3">Pune</option>
+                            <option value="4">Mumbai</option>
+                            <option value="5">Indore</option>
+                            <option value="6">Bhopal</option>
+                            <option value="7">Hyderabad</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3">
+                        <a href="//nicesnippets.com" target="_blank" class="btn btn-danger btn-block search-btn"><i
+                                class="fa fa-search" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <!Container for top margin -->
+    <div class="container boxTopMargin"></div>
+    <br>
+
+    <!-- <!How It Works Section Feature Captions -->
+    <div class="container-fluid">
+        <div class="hiwtitle">
+            <h1>How It Works ?</h1>
+        </div>
+        <div class="containerhiwtext">
+        
+            <div class="hiwrow">
+        
+                <div class="howitworkscard">
+                    <div class="hiwimg">
+                        <img src="./resources/images/home/HIWicon1.png" alt="Avatar">
+                    </div>
+        
+                    <div class="containerhiwtext">
+        
+                        <h5><b>Browse Venues</b></h5>
+                        <p>Browse and Find  Venues to create your shortlist</p>
+                    </div>
+                </div>
+        
+                <div class="howitworkscard">
+                    <div class="hiwimg">
+                        <img src="./resources/images/home/HIWicon2.png" alt="Avatar">
+                    </div>
+        
+                    <div class="containerhiwtext">
+                        <h5><b>Shortlist</b></h5>
+                        <p>Get most economical rates for your shortlisted venues.</p>
+                    </div>
+                </div>
+        
+                <div class="howitworkscard">
+                    <div class="hiwimg">
+                        <img src="./resources/images/home/HIWicon3.png" alt="Avatar">
+                    </div>
+        
+                    <div class="containerhiwtext">
+                        <h5><b>Book Venue</b></h5>
+                        <p>Select and Book the perfect venue in no time at all.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <!Carousel Body1 Feature Captions -->
+    <!-- Venue Cards -->
+    <div class="venueHeading my-5">
+        <h2>Browse Venues & Vendors</h2><br>
+    </div>
+
+    <div id="carouselExampleControls" class="carousel carousel-dark slide" data-ride="carousel">
+        <div id="my-carousel" class="carousel slide" data-interval="2000" data-bs-ride="carousel"></div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="cards-wrapper">
+                    <div class="card">
+                        <img src="./resources/images/carousel_venues/Mumbai.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title logoli font-weight-bold">MUMBAI</h5>
+                            <p class="card-text">Select your favourable location
+                            </p>
+                        </div>
+                    </div>                    
+                    <div class="card d-none d-md-block">
+                        <img src="./resources/images/carousel_venues/Kolhapur.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title logoli font-weight-bold">KOLHAPUR</h5>
+                            <p class="card-text">Select your favourable location
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="card d-none d-md-block">
+                        <img src="./resources/images/carousel_venues/Indore.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title logoli font-weight-bold">INDORE</h5>
+                            <p class="card-text">Select your favourable location
+                                .</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="cards-wrapper">
+                    <div class="card">
+                        <img src="./resources/images/carousel_venues/pune.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title logoli font-weight-bold">PUNE</h5>
+                            <p class="card-text">Select your favourable location
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="card d-none d-md-block">
+                        <img src="./resources/images/carousel_venues/Bhopal.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title logoli font-weight-bold">BHOPAL</h5>
+                            <p class="card-text">Select your favourable location
+                            </p>
+
+
+                        </div>
+                    </div>
+                    <div class="card d-none d-md-block">
+                        <img src="./resources/images/carousel_venues/Hyderabad.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title logoli font-weight-bold">HYDERABAD</h5>
+                            <p class="card-text">Select your favourable location
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!-- Vendor Cards -->
+    <br>
+    <div class="container">
+        <div class="vendor">
+            <br>
+            <h2>Vendors by Category</h2><br>
+        </div>
+
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div id="my-carousel" class="carousel slide" data-interval="5000" data-bs-ride="carousel"></div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="cards-wrapper">
+                        <div class="card">
+                            <img src="./resources/images/carousel_vendors/makeup.webp" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>Makeup Artists</b></h5>
+                                <p class="card-text">Browse makeup artists to see photos of their work,<br>
+                                    ask them for quotations
+    
+                                </p>
+    
+                            </div>
+                        </div>
+                        <div class="card d-none d-md-block">
+                            <img src="./resources/images/carousel_vendors/jewellery.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>Jewellery</b></h5>
+                                <p class="card-text"> Send your requirements to these jewellers and <br>take your pick
+                                    from their jewellery collections
+                                </p>
+    
+                            </div>
+                        </div>
+                        <div class="card d-none d-md-block">
+                            <img src="./resources/images/carousel_vendors/mehandi.webp" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>Mehendi Artists</b></h5>
+                                <p class="card-text">Browse makeup artists to see photos of their work,<br>
+                                    ask them for quotations
+                                </p>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="cards-wrapper">
+                        <div class="card">
+                            <img src="./resources/images/carousel_vendors/caterer.webp" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>Caterer</b></h5>
+                                <p class="card-text">Find the perfect caterer for your event, as per<br> your preferred
+                                    veg
+                                    / non-veg cuisines
+                                </p>
+    
+                            </div>
+                        </div>
+                        <div class="card d-none d-md-block">
+                            <img src="./resources/images/carousel_vendors/decorators.jpg" class="card-img-top"
+                                alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>Decorators</b></h5>
+                                <p class="card-text">Style and theme you are looking for <br>will be able to deliver the
+                                    experience you desire
+                                </p>
+    
+    
+                            </div>
+                        </div>
+                        <div class="card d-none d-md-block">
+                            <img src="./resources/images/carousel_vendors/photographer.webp" class="card-img-top"
+                                alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>Photographer</b></h5>
+                                <p class="card-text">You make the moment,We make the memory<br>Select Best Photographers
+                                </p>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="cards-wrapper">
+                        <div class="card">
+                            <img src="./resources/images/carousel_vendors/bridal.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>Bridal Wear</b></h5>
+                                <p class="card-text">Have a perfect Wedding Dress and buy dress of<br> your dreams</p>
+    
+                            </div>
+                        </div>
+                        <div class="card d-none d-md-block">
+                            <img src="./resources/images/carousel_vendors/cake.webp" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>Cakes</b></h5>
+                                <p class="card-text">Make your special day more special by adding <br>delicious cakes
+                                </p>
+    
+                            </div>
+                        </div>
+                        <div class="card d-none d-md-block">
+                            <img src="./resources/images/carousel_vendors/florist.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>Florists</b></h5>
+                                <p class="card-text">Add perfect floral arrangements on your special event<br> to
+                                    brighten
+                                    your day</p>
+                                </p>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+    </div>
+
+    
+    <!-- <!CardDisplay Captions -->
+    <div class="container venueHeading">
+        <h2 style="position:relative;left:5px;top:30px" ; class=" container txt1">Our Blogs</h2>
+        <br>
+        <hr>
+        <div class="container my-4">
+            <div class="row mb-2">
+                <div class="col-md-4 my-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./resources/images/ourblogs/Img_pic3.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Top Wedding Food Trends for 2022: Delicious New Ideas</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 my-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./resources/images/ourblogs/Img_pic2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Incredible Wedding Ring Engraving Ideas | The Complete Guide</h5>
+                            <p class="card-text"></p>Access to a business's proprietary knowledge and trademarks to sell a product or provide a service.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 my-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./resources/images/ourblogs/Img_pic1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">10 Bridal Shower Tea Party Ideas : The Perfect Plan for the Blog</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary text-center">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- <!Jumbotron Captions -->
+    <div class="jumbotron">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-6 jumBorder">
+                    <h2 class="display-4">BookMyVenue!</h2>
+                    <p class="lead">Easy, Secure and Reliable Platform
+                        The platform has been designed to make your event planning process very easy. We recommend
+                        venues
+                        and event vendors as
+                        per your preferences in shortest time possible and facilitate clear communication, packages and
+                        services to ensure a
+                        safe, reliable, happy experience.</p>
+                    <hr class="my-4">
+                    <p class="lead">
+                        <a class="btn btn-primary btn-md" href="#" role="button">Learn more</a>
+                    </p>
+                </div>
+                <div class="col-md-6 jumBorder">
+                    <img src="./resources/images/jumbotron/fb_masonary_11.jpg" class="jumImage" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- footer code here-->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-xs-12">
+                    <div class="first">
+                        <h4>Event Planning Services</h4>
+                        <p> All Event Vendors</p>
+                        <p> Catering Services</p>
+                        <p> Wedding Planning</p>
+                        <p> Event Planning</p>
+                        <p> Birthday Planning</p>
+
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-xs-12">
+                    <div class="second">
+                        <h4>More</h4>
+                        <ul>
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="aboutus.html">About Us</a></li>
+                            <li><a href="contactus.html">Contact Us</a></li>
+                            <li><a href="venues.html">Find A Venue | Vendor</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-xs-12">
+                    <div class="third">
+                        <h4> Contact</h4>
+                        <ul>
+                            <li>+91 9876543210 </li>
+                            <li>+91 8967456543</li>
+
+                            <li><i class="far fa-envelope"></i> info@bookmyvenue.com</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="foot">
+            <h6>ⓒ 2022 BOOKMYVENUE | ALL RIGHTS RESERVED</h6>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="line"></div>
+                    <div class="second2">
+                        <a href="https://codepen.io/AndreeaBunget" target="_blank"> <i
+                                class="fab fa-codepen fa-2x margin"></i></a>
+                        <a href="https://github.com/WebDeveloperCodeRep" target="_blank"> <i
+                                class="fab fa-github fa-2x margin"></i></a>
+                        <a href="https://www.linkedin.com/in/andreea-mihaela-bunget-a4248812b/" target="_blank"> <i
+                                class="fab fa-linkedin fa-2x margin"></i></a>
+                        <a href="https://www.youtube.com/channel/UCX674BUbomzBCakbb75lhfA?view_as=subscriber"
+                            target="_blank"><i class="fab fa-youtube fa-2x margin"></i></a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="./resources/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

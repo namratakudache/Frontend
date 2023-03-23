@@ -1,0 +1,276 @@
+ .flex-container {
+     display: flex;
+     flex-direction: column;
+ }
+
+ body,
+ html {
+     font-family: 'Roboto Condensed', sans-serif;
+     background: linear-gradient(rgba(55, 55, 55, 0.1), rgba(55, 55, 55, 0.1)), url('../images/home/home-top-4.jpg') no-repeat;
+     /* background: url('./resources/images/home/home-top-4.jpg') no-repeat; */
+     background-size: cover;
+     width: 100%;
+     height: 50%;
+ }
+
+ .main-section {
+     position: absolute;
+     height: 55%;
+     padding: 150px 15px 60px 15px;
+ }
+
+ .main-section h1 {
+     font-size: 45px;
+ }
+
+ .select-part-section {
+     background: #fff;
+     position: relative;
+     left: 50%;
+     transform: translateX(-50%);
+     border-radius: 3px 0px 0px 3px !important;
+ }
+
+ .select-part-section select {
+     background: #fff;
+ }
+
+ .select-part-section .form-control {
+     border: 1px solid #fff;
+     box-shadow: none;
+ }
+
+ .select-part-section .form-control option {
+     border: 1px solid #fff;
+     padding: 20px !important;
+ }
+
+ .search-btn {
+     padding: 10px;
+ }
+
+ .title h3 {
+     color: white;
+
+ }
+
+ .col-lg-3 border-left {
+
+     align-items: center;
+ }
+
+ .a {
+     align-items: stretch;
+ }
+
+ .search-sec {
+     padding: 2rem;
+ }
+
+ .search-slt {
+     display: block;
+     width: 100%;
+     font-size: 0.875rem;
+     line-height: 1.5;
+     color: #55595c;
+     background-color: #fff;
+     background-image: none;
+     border: 1px solid #ccc;
+     height: calc(3rem + 2px) !important;
+     border-radius: 0;
+     cursor: pointer;
+ }
+
+ .wrn-btn {
+     width: 100%;
+     font-size: 18px;
+     font-weight: 400;
+     text-transform: capitalize;
+     height: calc(3rem + 2px) !important;
+     border-radius: 0;
+ }
+
+ /* .venuetext h1{
+            font-size: 45px;
+        }*/
+
+ .venuetext p {
+
+     color: white;
+ }
+
+ @media (min-width: 390px) {
+     .search-sec {
+         position: relative;
+         top: 270px;
+         left: 0px;
+         right: auto;
+         background-color: transparent;
+         /* background: rgba(33, 38, 42, 0.51); */
+     }
+ }
+
+ /* @media (max-width: 992px) {
+            .search-sec {
+                align-items: center;
+                background: #262728;
+            }
+        } */
+
+
+
+ @media (max-width: 840px) {
+     .venuetext h1 {
+         font-size: 35px;
+     }
+
+     .venuetext p {
+         font-size: 20px;
+     }
+ }
+
+ @media (max-width: 800px) {
+     .venuetext h1 {
+         margin-top: 85px;
+         font-size: 25px;
+     }
+
+     .venuetext p {
+         font-size: 15px;
+     }
+ }
+
+ /* Container holding the image and the text */
+ .container {
+     position: relative;
+     /* text-align: center; */
+     color: black;
+ }
+ /* filter and card */
+ .navlink-top {
+     margin-left: 120px;
+ }
+
+ .venuecard-root-tag {
+     width: 100%;
+     margin-top: 260px;
+     padding: 10px;
+     position: relative;
+ }
+
+ .venuecard-border {
+     border: 1px solid black;
+ }
+
+ .venuecard-left {
+     width: 20%;
+     float: left;
+     margin-left: 140px;
+ }
+ .venuecard-left ul li {
+     cursor: pointer;
+ }
+
+ .venuecard-right {
+     width: 60%;
+     float: right;
+     top: 10vh;
+     margin: 5px;
+     margin-right: 110px;
+     color: black;
+     /* border: 1px solid black; */
+ }
+
+ .venuecard-icon {
+     width: 20px;
+     height: 20px;
+ }
+
+ .venuecard-align-left {
+    cursor: pointer;
+     text-align: left;
+ }
+
+ .venuecard-img {
+     width: 275px;
+     height: 190px;
+ }
+
+
+ @media(max-width:998px) {
+     .venuecard-root-tag {
+         font-size: 55%;
+
+     }
+
+ }
+
+ @media(max-width:768px) {
+     .venuecard-root-tag {
+         font-size: 45%;
+
+     }
+
+ }
+
+ @media screen and (max-width: 1036px) {
+     .venuecard-left {
+         width: 55%;
+         margin-left: 10%;
+     }
+
+ }
+
+ @media screen and (max-width: 600px) {
+     .venuetext h1 {
+         font-size: 20px;
+     }
+
+     body {
+         background: no-repeat;
+     }
+
+ }
+
+ @media screen and (max-width: 900px) {
+     .venuetext p {
+         display: none;
+     }
+
+     .search-sec {
+         padding: 3rem;
+     }
+
+     body {
+         background: no-repeat;
+     }
+
+ }
+
+ /* 
+        @media screen and (max-width: 1300px) {
+            .venuecard-right {
+                margin-right: 60px;
+            }
+
+        } */
+
+ @media screen and (min-device-width: 1050px) and (max-device-width: 1300px) {
+     .venuecard-right {
+         margin-right: 60px;
+     }
+ }
+
+ /* @media screen and (max-width: 1050px) {
+            .venuecard-right {
+                margin-right: 30px;
+            }
+
+        } */
+
+ .BgColour {
+     width: 100%;
+     color: black;
+     background-color: rgb(73, 72, 72);
+     background-color: #343a40;
+ }

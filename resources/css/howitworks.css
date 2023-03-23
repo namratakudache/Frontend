@@ -1,0 +1,35 @@
+/* Cards Section */
+.cards-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.card img {
+    padding: 10px;
+    align-items: center;
+    max-width: 30%;
+    max-height: 30%;
+}
+
+
+.card-body {
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.card {
+    margin: 20px;
+    align-items: center;
+    width: 320px;
+    height: 300px;
+}
+
+
+.v h2 {
+    margin-top: 50px;
+
+    text-align: center;
+
+}

@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<!-- <html lang="en" xmlns:th="http://www.thymeleaf.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.thymeleaf.com "> -->
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+
+    <!-- For Bootstrap File -->
+    <link href="./resources/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- All External Css Files Imported -->
+    <!-- Custom styles for header-customer module template -->
+    <link rel="stylesheet" type="text/css" href="./resources/css/header.css">
+    
+    <!-- Custom styles for carousel and footer template -->
+    <link rel="stylesheet" type="text/css" href="./resources/css/carousel.css">
+
+    <!-- Custom styles for carousel and footer template -->
+    <link rel="stylesheet" type="text/css" href="./resources/css/venuecard.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Footer links -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+    <script>
+        function scrollValue() {
+            var navbar = document.getElementById('navbar');
+            var scroll = window.scrollY;
+            if (scroll < 75) {
+                navbar.classList.remove('BgColour');
+            } else {
+                navbar.classList.add('BgColour');
+            }
+        }
+
+        window.addEventListener('scroll', scrollValue);
+    </script>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div >
+            <!-- NavBar -->
+            <header>
+                <div class="fixed-top py-0 " id="navbar">
+                    <div class="container">
+                        <div
+                            class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                            <a href="/"
+                                class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                                <span class="logo">𝐵𝑜𝑜𝓀𝑀𝓎𝒱𝑒𝓃𝓊𝑒<span>
+                                        <!-- <span class="logo">ßððkM¥Vêñµê<span> -->
+                            </a>
+
+                            <ul
+                                class="nav col-12 col-lg-auto my-2 align-items-center justify-content-center my-md-0 text-small">
+                                <li>
+                                    <a href="home.html" class="nav-link text-white">
+                                        <span class="logoli">HOME</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="venuecard.html" class="nav-link text-white">
+                                        <span class="logoli">VENUES</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="aboutus.html" class="nav-link text-white">
+                                        <span class="logoli">ABOUT</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="contactus.html" class="nav-link text-white">
+                                        <span class="logoli">CONTACT</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="text-end">
+                                        <a href="" class="btn btn-light text-dark my-3 mx-2" data-toggle="modal"
+                                            data-target="#loginModal">Login</a>
+                                        <a href="" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#signupModal">Sign-up</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="container-fluid main-section">
+                <div class="row">
+                    <div class="col-lg-12 text-white text-center mb-5 venuetext">
+                        <h1>Venues By Selected Location</h1>
+                        <p class="container">Browse, shortlist and get best prices and packages from venues available to
+                            host
+                            your event. Take your pick from banquet
+                            halls, resorts, hotels, farmhouses and party lawns as per your preferences. Once your venue
+                            is booked, let us also help
+                            you select vendors like event planner, decorator, caterer, photographer, band, DJ and more.
+                        </p>
+                    </div>
+
+                    <div class="a">
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="a">
+                <section class="search-sec">
+                    <div class="container">
+                        <form action="#" method="post" novalidate="novalidate">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2 col-sm-12 p-0"></div>
+                                        <div class="col-lg-2 col-md-2 col-sm-12 p-0">
+                                            <select class="form-control search-slt" id="exampleFormControlSelect1">
+                                                <option>Select Venue</option>
+                                                <option>Kolhapur</option>
+                                                <option>Pune</option>
+                                                <option>Mumbai</option>
+                                                <option>Indore</option>
+                                                <option>Bhopal</option>
+                                                <option>Hyderabad</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-12 p-0">
+                                            <input type="text" class="form-control search-slt"
+                                                placeholder="Enter Venue By Name">
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-12 p-0">
+                                            <button type="button" class="btn btn-danger wrn-btn">Search</button>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-12 p-0"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+
+        <!-- <!login Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                    else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <!Signup Modal -->
+        <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="signupModalLabel">SignUp</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputName">Full Name</label>
+                                <input type="Name" class="form-control" id="exampleInputName" aria-describedby="NameHelp">
+                                <small id="NameHelp" class="form-text text-muted">In Capital Letters.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                    else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                                <small id="exampleInputPassword1" class="form-text text-muted">Must be minimum of 6
+                                    characters.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="cexampleInputPassword1">Confirm Password</label>
+                                <input type="password" class="form-control" id="cexampleInputPassword1">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Create Account</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Venue-Card Section -->
+        <div>
+            <div class="venuecard-root-tag">
+                <!-- Navigation by / link  -->
+                <div class="navlink-top">
+                    <a href="" class="navlink">Home</a> &ensp;/ &ensp;<a href="" class="navlink">Venue</a>
+                    <hr>
+                </div>
+
+                <!-- Filter By -->
+                <div class="venuecard-left my-2">
+                    <h4>𝐅𝐢𝐥𝐭𝐞𝐫 𝐲𝐨𝐮𝐫 𝐒𝐞𝐚𝐫𝐜𝐡-</h4>
+                    <!-- Filter By Venue-->
+                    <ul class="list-group mb-4">
+                        <li class="list-group-item active">Search By Venue</li>
+                        <li class="list-group-item"><input type="radio" name="venue" /> Restaurants</li>
+                        <li class="list-group-item"><input type="radio" name="venue" /> Resorts</li>
+                        <li class="list-group-item"><input type="radio" name="venue" /> Farm House</li>
+                        <li class="list-group-item"><input type="radio" name="venue" /> Banquet Halls</li>
+                        <li class="list-group-item"><input type="radio" name="venue" /> Party Lawns</li>
+                    </ul>
+
+                    <!-- Filter By Occasion-->
+                    <ul class="list-group mb-4">
+                        <li class="list-group-item active">Search By Occasion</li>
+                        <li class="list-group-item"><input type="radio" name="Occasion" /> Wedding</li>
+                        <li class="list-group-item"><input type="radio" name="Occasion" /> Ring Ceremony</li>
+                        <li class="list-group-item"><input type="radio" name="Occasion" /> Birthday Party</li>
+                        <li class="list-group-item"><input type="radio" name="Occasion" /> Family Function</li>
+                        <li class="list-group-item"><input type="radio" name="Occasion" /> Farewell</li>
+                    </ul>
+                </div>
+
+                <!--Venue Card -->
+                <div class="venuecard-right">
+                    <!--my-5-->
+                    <div>
+                        <p class="fs-3">𝐏𝐚𝐫𝐭𝐲 / 𝐄𝐯𝐞𝐧𝐭 𝐏𝐥𝐚𝐜𝐞𝐬 𝐚𝐧𝐝 𝐖𝐞𝐝𝐝𝐢𝐧𝐠 𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧 𝐕𝐞𝐧𝐮𝐞</p>
+                    </div>
+                    <div class="container text-center venuecard-border mb-4">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="align-self-start">
+                                    <img src="./resources/images/venues_card/Hotel4.png" class="img-fluid venuecard-img">
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <h3 class="venuecard-align-left" onclick="location.href='venuedetails.html';">Hotel Park View</h3>
+                                <h5 class="venuecard-align-left"><img src="./resources/images/venues_card/venue.webp" alt=""
+                                        class="venuecard-icon">
+                                    Senate</h5>
+                                <div class="venuecard-align-left">
+                                    <div class="row">
+                                        <div class="col">
+                                            <img src="./resources/images/venues_card/location.jpg" alt="" class="venuecard-icon"> Andheri
+                                            West, Mumbai
+                                        </div>
+                                        <div class="col">
+                                            <img src="./resources/images/venues_card/veg.svg" alt="" class="venuecard-icon"> Rs. 750
+                                            price/plate
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <img src="./resources/images/venues_card/rating-star.svg" alt="" class="venuecard-icon"> 4.8 (2
+                                            reviews)
+                                        </div>
+                                        <div class="col">
+                                            <img src="./resources/images/venues_card/non-veg.svg" alt="" class="venuecard-icon"> Rs. 900
+                                            price/plate
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-3">
+                                <br><br>
+                                <div class="container">
+                                    <div style="display: inline-block;">
+                                        <p>259 Views</p>
+                                    </div>&emsp;
+                                    <div style="display: inline-block;">
+                                        <p><img src="./resources/images/venues_card/capacity.svg" class="venuecard-icon"> 25-25 Guests</p>
+                                    </div>&emsp;
+                                    <div style="display: inline-block; margin-bottom: 5px;"> <button type="submit"
+                                            class="btn btn-danger" data-toggle="modal" data-target="#eventModal">Check Availability</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container text-center venuecard-border mb-4">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="align-self-start">
+                                    <img src="./resources/images/venues_card/Hotel2.png" class="img-fluid venuecard-img ">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h3 class="venuecard-align-left " onclick="location.href='venuedetails.html';">VITS Mumbai</h3>
+                                <h5 class="venuecard-align-left"><img src="./resources/images/venues_card/venue.webp" alt=""
+                                        class="venuecard-icon">
+                                    Onyx 1</h5>
+                                <div class="venuecard-align-left">
+                                    <div class="row">
+                                        <div class="col">
+                                            <img src="./resources/images/venues_card/location.jpg" alt="" class="venuecard-icon"> Andheri
+                                            East, Mumbai
+                                        </div>
+                                        <div class="col">
+                                            <img src="./resources/images/venues_card/veg.svg" alt="" class="venuecard-icon"> Rs. 1300
+                                            price/plate
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <img src="./resources/images/venues_card/rating-star.svg" alt="" class="venuecard-icon"> 4.6 (2
+                                            reviews)
+                                        </div>
+                                        <div class="col">
+                                            <img src="./resources/images/venues_card/non-veg.svg" alt="" class="venuecard-icon"> Rs. 1400
+                                            price/plate
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-3">
+                                <br><br>
+                                <div class="container">
+                                    <div style="display: inline-block;">
+                                        <p>1409 Views</p>
+                                    </div>&nbsp;
+                                    <div style="display: inline-block;">
+                                        <p><img src="./resources/images/venues_card/capacity.svg" class="venuecard-icon"> 15-25 Guests</p>
+                                    </div>&nbsp;
+                                    <div style="display: inline-block; margin-bottom: 5px;"> <button type="submit"
+                                            class="btn btn-danger" data-toggle="modal" data-target="#eventModal">Check Availability</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="container text-center venuecard-border mb-4">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="align-self-start">
+                                    <img src="./resources/images/venues_card/Hotel1.png" class="img-fluid venuecard-img ">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h3 class="venuecard-align-left" onclick="location.href='venuedetails.html';">Ishaara Palladium</h3>
+                                <h5 class="venuecard-align-left"><img src="./resources/images/venues_card/venue.webp" alt=""
+                                        class="venuecard-icon">
+                                    Ishaara Outdoor</h5>
+                                <div class="venuecard-align-left">
+                                    <div class="row">
+                                        <div class="col">
+                                            <img src="./resources/images/venues_card/location.jpg" alt="" class="venuecard-icon"> Lower
+                                            Parel,
+                                            Mumbai
+                                        </div>
+                                        <div class="col">
+                                            <img src="./resources/images/venues_card/veg.svg" alt="" class="venuecard-icon"> Rs. 1200
+                                            price/plate
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <img src="./resources/images/venues_card/rating-star.svg" alt="" class="venuecard-icon"> 4.3 (2
+                                            reviews)
+                                        </div>
+                                        <div class="col">
+                                            <img src="./resources/images/venues_card/non-veg.svg" alt="" class="venuecard-icon"> Rs. 1200
+                                            price/plate
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-3">
+                                <br><br>
+                                <div class="container">
+                                    <div style="display: inline-block;">
+                                        <p>891 Views</p>
+                                    </div>&nbsp;
+                                    <div style="display: inline-block;">
+                                        <p><img src="./resources/images/venues_card/capacity.svg" class="venuecard-icon"> 15-120 Guests</p>
+                                    </div>&nbsp;
+                                    <div style="display: inline-block; margin-bottom: 5px;"> <button type="submit"
+                                            class="btn btn-danger" data-toggle="modal" data-target="#eventModal">Check Availability</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- <!Event Popup Modal -->
+        <div class="modal fade myevent-33" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="eventModalLabel">Event Details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="row">
+                                <div class="col">
+                                    <select class="form-select" required>
+                                        <option value="" disabled selected hidden> Select Occasion</option>
+                                        <option>Wedding</option>
+                                        <option>Ring Ceremony</option>
+                                        <option>Birthday Party</option>
+                                        <option>Family Function</option>
+                                        <option>Farewell</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <input type="date" class="form-select" placeholder="Select Event Date" required />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <br>
+                                    <input type="number" min="25" max="100" placeholder="No. Of Guests" class="form-select"
+                                        required>
+                                </div>
+                                <div class="col">
+                                    <br>
+                                    <select class="form-select" required>
+                                        <option value="" disabled selected hidden> Select Budget Range</option>
+                                        <option>1200+</option>
+                                        <option>800-1200</option>
+                                        <option>400-800</option>
+                                    </select>
+        
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <br>
+                                    <select class="form-select">
+                                        <option>Only Veg</option>
+                                        <option>Both Veg And Non-Veg</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <br>
+                                    <select class="form-select">
+                                        <option>Soft Drink</option>
+                                        <option>Alcoholic Drink</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required />
+                                <label>Share availability and proposals from similar venues for my event.</label>
+                            </div>
+                            <br>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-danger">Billing Window</button>
+                                <span style="text-align: center;">By clicking on billing button, you are accepting our <a
+                                        href="#">terms and conditions</a> </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer code here-->
+        <div>
+            <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-xs-12">
+                            <div class="first">
+                                <h4>Event Planning Services</h4>
+                                <p> All Event Vendors</p>
+                                <p> Catering Services</p>
+                                <p> Wedding Planning</p>
+                                <p> Event Planning</p>
+                                <p> Birthday Planning</p>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-xs-12">
+                            <div class="second">
+                                <h4>More</h4>
+                                <ul>
+                                    <li><a href="home.html">Home</a></li>
+                                    <li><a href="aboutus.html">About Us</a></li>
+                                    <li><a href="contactus.html">Contact Us</a></li>
+                                    <li><a href="venues.html">Find A Venue | Vendor</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-xs-12">
+                            <div class="third">
+                                <h4> Contact</h4>
+                                <ul>
+                                    <li>+91 9876543210 </li>
+                                    <li>+91 8967456543</li>
+
+                                    <li><i class="far fa-envelope"></i> info@bookmyvenue.com</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="foot">
+                    <h6>ⓒ 2022 BOOKMYVENUE | ALL RIGHTS RESERVED</h6>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="line"></div>
+                            <div class="second2">
+                                <a href="https://codepen.io/AndreeaBunget" target="_blank"> <i
+                                        class="fab fa-codepen fa-2x margin"></i></a>
+                                <a href="https://github.com/WebDeveloperCodeRep" target="_blank"> <i
+                                        class="fab fa-github fa-2x margin"></i></a>
+                                <a href="https://www.linkedin.com/in/andreea-mihaela-bunget-a4248812b/" target="_blank">
+                                    <i class="fab fa-linkedin fa-2x margin"></i></a>
+                                <a href="https://www.youtube.com/channel/UCX674BUbomzBCakbb75lhfA?view_as=subscriber"
+                                    target="_blank"><i class="fab fa-youtube fa-2x margin"></i></a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+</body>
+
+</html>
